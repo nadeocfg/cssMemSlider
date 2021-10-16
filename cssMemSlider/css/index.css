@@ -1,0 +1,136 @@
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  background: #25282a;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.slider {
+  position: relative;
+}
+
+.slides-wrapper {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.slides {
+  display: flex;
+  width: max-content;
+  scroll-behavior: smooth;
+  touch-action: none;
+}
+
+.slides-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.slides-wrapper::-webkit-scrollbar-thumb {
+  display: none;
+}
+.slides-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slides__item {
+  width: 800px;
+  height: 500px;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
+
+img {
+  width: 100%;
+  height: calc(100% - 50px);
+  object-fit: cover;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 1.2;
+}
+
+.slider__controls {
+  position: sticky;
+  bottom: 4px;
+  right: 0;
+  display: flex;
+  align-items: self-end;
+  justify-content: flex-start;
+  width: auto;
+}
+
+.slider__controls a {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #7faae8;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 2px solid #7faae8;
+  transition: all 300ms ease;
+}
+
+.slider__controls a:last-child {
+  margin-right: 0;
+}
+
+#slide1:target ~ .slider__controls a[href='#slide1'],
+#slide2:target ~ .slider__controls a[href='#slide2'],
+#slide3:target ~ .slider__controls a[href='#slide3'],
+#slide4:target ~ .slider__controls a[href='#slide4'] {
+  background: transparent;
+  border: 2px solid #7faae8;
+}
+
+#slide1:target ~ .slider__controls a[href='#slide1']:hover,
+#slide2:target ~ .slider__controls a[href='#slide2']:hover,
+#slide3:target ~ .slider__controls a[href='#slide3']:hover,
+#slide4:target ~ .slider__controls a[href='#slide4']:hover {
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+.slider__controls a:hover {
+  background: #fff;
+  border: 2px solid #fff;
+}

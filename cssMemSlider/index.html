@@ -6,11 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
-    <h1>Meme slider</h1>
+    <div class="container">
+      <h1>Meme slider</h1>
 
-    <script src="./js/index.js"></script>
+      <div class="slider">
+        <div class="slides-wrapper">
+          <div class="slides">
+            <figure id="slide1" class="slides__item">
+              <img src="./img/slide1.jpg" alt="meme1" />
+              <figcaption>When you solving codewars tasks</figcaption>
+            </figure>
+            <figure id="slide2" class="slides__item">
+              <img src="./img/slide2.jpg" alt="meme2" />
+              <figcaption>Too rich</figcaption>
+            </figure>
+            <figure id="slide3" class="slides__item">
+              <img src="./img/slide3.jpg" alt="meme3" />
+              <figcaption>Very interesting</figcaption>
+            </figure>
+            <figure id="slide4" class="slides__item">
+              <img src="./img/slide4.jpg" alt="meme4" />
+              <figcaption>When you miss deadline</figcaption>
+            </figure>
+
+            <div class="slider__controls">
+              <a href="#slide1"></a>
+              <a href="#slide2"></a>
+              <a href="#slide3"></a>
+              <a href="#slide4"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
