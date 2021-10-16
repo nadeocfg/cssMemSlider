@@ -101,11 +101,12 @@ figcaption {
 
 .slider__controls a {
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 4px;
+  height: 4px;
+  margin: 4px;
+  padding: 4px;
   background: #7faae8;
   border-radius: 50%;
-  margin-right: 8px;
   border: 2px solid #7faae8;
   transition: all 300ms ease;
 }
@@ -133,4 +134,30 @@ figcaption {
 .slider__controls a:hover {
   background: #fff;
   border: 2px solid #fff;
+}
+
+@media (max-width: 320px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .slides__item {
+    width: 280px;
+    height: 220px;
+  }
+
+  img {
+    height: calc(100% - 70px);
+  }
+
+  .slider__controls {
+    position: sticky;
+    bottom: 4px;
+    right: calc(50% - 40px);
+    display: flex;
+    align-items: self-end;
+    justify-content: flex-start;
+    width: auto;
+    margin-bottom: 35px;
+  }
 }
